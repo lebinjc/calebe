@@ -1,0 +1,29 @@
+function verificarCompatibilidade() {
+    const nome1 = document.getElementById("nome1").value;
+    const nome2 = document.getElementById("nome2").value;
+
+    const respostas = [
+        "Com certeza! Eles são perfeitos um para o outro!",
+        "Parece que há uma boa chance de darem certo no amor.",
+        "Talvez, depende de como eles se conhecem.",
+        "Hmm, parece que a compatibilidade é um mistério.",
+        "Eles podem ser bons amigos, mas o amor é incerto.",
+        "Infelizmente, não parece haver muita compatibilidade no amor."
+    ];
+
+    const porcentagens = [
+        "100%",
+        "75%",
+        "50%",
+        "25%",
+        "10%",
+        "0%"
+    ];
+
+    const resultadoIndex = Math.floor(Math.random() * respostas.length);
+    const resultado = respostas[resultadoIndex];
+    const porcentagem = porcentagens[resultadoIndex];
+
+    document.getElementById("resultado").textContent = `Compatibilidade de ${nome1} e ${nome2}: ${resultado}`;
+    document.getElementById("porcentagem").textContent = `Porcentagem de compatibilidade: ${porcentagem}`;
+}
